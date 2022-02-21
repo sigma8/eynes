@@ -1,7 +1,4 @@
 from math import pi
-from builtins import Exception
-
-
 
 class Circulo:
 
@@ -18,7 +15,6 @@ class Circulo:
     def __repr__(self) -> str:
         return f"Circulo (radio={self.radius}"
 
-    
     @property
     def radius(self):
         return self._radius
