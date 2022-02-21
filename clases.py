@@ -7,10 +7,18 @@ class Circulo:
 
     def __init__(self, radius): 
         self.radius = radius
+   
+    def __mul__(self, other):
+        self.radius = self.radius*other
+        return f"El nuevo radio es: {self.radius}"
+        
     def __str__(self) -> str:
         return f"Radio del circulo {self.radius}"
+
     def __repr__(self) -> str:
         return f"Circulo (radio={self.radius}"
+
+    
     @property
     def radius(self):
         return self._radius
@@ -36,6 +44,6 @@ if __name__ == '__main__':
     
     new_circulo = Circulo(4)
 
-    print(new_circulo, new_circulo.get_area(), new_circulo.get_perimetro())
+    print(new_circulo*2, new_circulo.get_area(), new_circulo.get_perimetro())
 
 
